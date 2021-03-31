@@ -1,0 +1,106 @@
+$font_1: Bai Jamjuree, sans-serif;
+$font_2: Roboto, sans-serif;
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+section {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-1 {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // width: 1152px;
+
+        h2 {
+        font-family: $font_1;
+        font-weight: bold;
+        font-size: 60px;
+        line-height: 60px;
+        letter-spacing: -0.02em;
+        text-align: center; 
+        margin-bottom: 16px;
+        color: rgba(79, 88, 106, 1);       
+    }
+    p{
+        width: 52%;
+        font-family: $font_1;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 30px;
+        letter-spacing: -0.01em;
+        color: rgba(155, 170, 250, 1);
+        text-align: center;
+    }
+}
+
+.container-2 {
+    margin: 48px 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @media (max-width: 576px) {
+        justify-content: center;            
+    }
+
+        .box {               
+        width: calc((100% - 80px) / 3);        
+        display: flex;
+        @media (max-width: 768px) {
+            width: calc((100% - 40px) / 2);
+        }
+        @media (max-width: 576px) {
+            width: 100%;            
+        }
+        .picture {
+            width: 48px;
+            height: 48px;       
+            border-radius: 50%;
+            margin: 16px;
+            background: #E6EFFF;
+
+            img {
+                display: block;
+                margin: 12px auto;                
+            }
+        }
+
+        .txt {
+            
+            width: calc(100% - 48px); 
+            padding: 16px 16px 16px 0;
+            .header {
+                font-family: $font_1;
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 32px;
+                letter-spacing: 0.15px;
+                color: rgba(0, 0, 0, 0.87);
+            }
+
+            .text {
+                font-family: $font_2;
+                font-weight: normal;
+                font-size: 20px;
+                line-height: 30px;                          
+                letter-spacing: 0.15px;
+                color: #5E6366;
+            }
+        }
+    }   
+    .box:hover {
+        border-radius: 10px;
+        box-shadow: 0px 6px 7px 1px rgba(54, 123, 245, 0.24);
+    } 
+    } 
